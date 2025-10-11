@@ -1,0 +1,22 @@
+{
+  "name": "trafalgar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "sass-watch": "sass --watch ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightylay/Trafalgar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nightylay/Trafalgar/issues"
+  },
+  "homepage": "https://github.com/nightylay/Trafalgar#readme",
+  "dependencies": {
+    "sass": "^1.93.2"
+  }
+}

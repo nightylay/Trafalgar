@@ -1,0 +1,42 @@
+$desktop: 1180.98px;
+$laptop: 1023.98px;
+$tablet: 767.98px;
+$mobile: 480.98px;
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: $mobile-s-above) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
