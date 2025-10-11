@@ -7,7 +7,54 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+    <script src="scripts/main.js" type="module"></script>
     <title>Trafalgar</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <a href="#" class="header__logo">
+          <svg class="header__logo-icon">
+            <use href="assets/sprites.svg#logo-img"></use>
+          </svg>
+          Trafalgar
+        </a>
+
+        <div class="header__overlay" data-js-header-menu>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Home</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Find a doctor</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Apps</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Testimonials</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">About us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <button
+          class="header__burger-button burger-button visible-mobile"
+          type="button"
+          aria-label="Open menu"
+          title="Open menu"
+          data-js-header-burger-button
+        >
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+        </button>
+      </div>
+    </header>
+  </body>
 </html>

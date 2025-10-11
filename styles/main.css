@@ -207,6 +207,7 @@ svg * {
   --color-black: #000000;
   --color-blue: #458ff6;
   --color-blue-alternate: #4089ed;
+  --color-dark-blue: #233348;
   --color-dark-purple: #1f1534;
   --color-gradient-blue: linear-gradient(212deg, #67c3f3 0%, #5a98f2 100%);
   --container-width: 1120px;
@@ -218,6 +219,224 @@ svg * {
   --button-height: 56px;
   --button-border: 1.4px solid #458ff6;
   --transition-duration: 0.2s;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (width <= 1023.98px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (width > 1023.98px) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+html.is-lock {
+  overflow: hidden;
+}
+
+body {
+  font-size: clamp(14px, 1.3125vw, 21px);
+  font-family: var(--font-family-base);
+  display: flex;
+  flex-direction: column;
+  color: var(--color-primary);
+  line-height: 1.52;
+  font-weight: 300;
+}
+
+main {
+  flex-grow: 1;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: var(--color-dark-purple);
+  font-weight: 400;
+}
+@media (hover: hover) {
+  a:hover {
+    font-weight: 700;
+  }
+}
+@media (hover: none) {
+  a:active {
+    font-weight: 700;
+  }
+}
+a[class] {
+  text-decoration: none;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+h1,
+.h1 {
+  font-size: clamp(24px, 3vw, 48px);
+  line-height: 1.17;
+}
+
+h2,
+.h2 {
+  font-size: clamp(18px, 2.25vw, 36px);
+}
+
+h3,
+.h2 {
+  font-size: clamp(16px, 1.5vw, 24px);
+  line-height: 2.33;
+}
+
+.header {
+  padding-top: 56px;
+}
+@media (width <= 1023.98px) {
+  .header {
+    padding-top: 36px;
+  }
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  column-gap: 12px;
+  color: var(--color-dark-blue);
+  z-index: 2;
+}
+.header__logo-icon {
+  width: 41px;
+  height: 41px;
+}
+.header__overlay {
+  transition-duration: var(--transition-duration);
+}
+@media (width <= 1023.98px) {
+  .header__overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 1;
+    background-color: var(--color-white);
+  }
+}
+@media (width <= 1023.98px) {
+  .header__overlay:not(.is-visible) {
+    opacity: 0;
+    visibility: hidden;
+    translate: 100%;
+  }
+}
+@media (width <= 1023.98px) {
+  .header__menu {
+    overflow-y: auto;
+  }
+}
+.header__menu-list {
+  display: flex;
+  column-gap: 40px;
+}
+@media (width <= 1023.98px) {
+  .header__menu-list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+}
+.header__menu-link {
+  font-size: clamp(16px, 1.125vw, 18px);
+  opacity: 0.5;
+  display: inline-flex;
+  align-items: center;
+  height: 51px;
+}
+@media (width <= 1023.98px) {
+  .header__menu-link {
+    font-size: 36px;
+  }
+}
+@media (hover: hover) {
+  .header__menu-link:hover {
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  .header__menu-link:active {
+    opacity: 1;
+  }
+}
+
+.burger-button {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: none;
+  background: none;
+  z-index: 2;
+}
+.burger-button.is-active .burger-button__line:first-child {
+  rotate: 45deg;
+  translate: 0px 10px;
+}
+.burger-button.is-active .burger-button__line:nth-child(2) {
+  rotate: -45deg;
+}
+.burger-button.is-active .burger-button__line:last-child {
+  width: 0;
+}
+.burger-button__line {
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-dark-blue);
+  border-radius: 10px;
+  transition-duration: var(--transition-duration);
 }
 
 /*# sourceMappingURL=main.css.map */
