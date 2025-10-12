@@ -210,7 +210,9 @@ svg * {
   --color-dark-blue: #233348;
   --color-dark-purple: #1f1534;
   --color-gradient-blue: linear-gradient(212deg, #67c3f3 0%, #5a98f2 100%);
-  --container-width: 1120px;
+  --container-width-lg: 1270px;
+  --container-width-md: 1220px;
+  --container-width-sm: 1120px;
   --container-padding-x: 20px;
   --font-family-base: "Mulish", sans-serif;
   --border-radius-20: 20px;
@@ -221,8 +223,20 @@ svg * {
   --transition-duration: 0.2s;
 }
 
-.container {
-  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+.container-lg {
+  max-width: calc(var(--container-width-lg) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.container-md {
+  max-width: calc(var(--container-width-md) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.container-sm {
+  max-width: calc(var(--container-width-sm) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }
