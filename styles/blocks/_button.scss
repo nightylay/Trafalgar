@@ -1,0 +1,20 @@
+@use '../helpers' as *;
+
+.button {
+  height: var(--button-height);
+  color: var(--color-blue);
+  border: var(--button-border);
+  border-radius: 55px;
+
+  &--bg-blue {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    font-weight: 700;
+    padding-inline: 40px;
+
+    @include hover {
+      background-color: var(--color-white);
+      color: var(--color-blue);
+    }
+  }
+}

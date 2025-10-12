@@ -69,10 +69,11 @@
 
     &-link {
       @include fluid-text(18, 16);
-      opacity: 0.5;
+
       display: inline-flex;
       align-items: center;
       height: 51px;
+      opacity: 0.5;
 
       @include tablet {
         font-size: 36px;

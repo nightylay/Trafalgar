@@ -1,0 +1,93 @@
+@use '../helpers' as *;
+
+.hero {
+  position: relative;
+  padding: 84px 0px 190px 0px;
+  overflow-x: hidden;
+
+  &:before {
+    --widthBgImageDots: 131px;
+
+    content: '';
+    position: absolute;
+    left: calc((var(--widthBgImageDots) - 80px) * -1);
+    top: 10%;
+    width: var(--widthBgImageDots);
+    height: 115px;
+    background: url('../../assets/images/bg-images/dots.svg') center / contain
+      no-repeat;
+  }
+
+  @include tablet {
+    padding: 64px 0px 150px 0px;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 25px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__body {
+    max-width: 440px;
+
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  &__title {
+    @include mobile {
+      order: -2;
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__description {
+    @include fluid-text(21, 18);
+    line-height: 1.52;
+
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+
+    @include mobile {
+      text-align: justify;
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__button {
+    @include mobile {
+      max-width: 250px;
+      width: 100%;
+    }
+  }
+
+  &__image {
+    margin-right: -30px;
+
+    @include laptop {
+      max-width: 50%;
+      height: auto;
+      margin-right: 0;
+    }
+
+    @include mobile {
+      max-width: 100%;
+      order: -1;
+      margin-bottom: 50px;
+    }
+  }
+}
