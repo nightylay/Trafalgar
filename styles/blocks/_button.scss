@@ -3,18 +3,27 @@
 .button {
   height: var(--button-height);
   color: var(--color-blue);
+  background: var(--color-white);
   border: var(--button-border);
   border-radius: 55px;
+  padding-inline: 51px;
+
+  @include hover {
+    background: var(--color-gradient-blue);
+    color: var(--color-white);
+    border: none;
+  }
 
   &--bg-blue {
-    background-color: var(--color-blue);
+    background: var(--color-blue);
     color: var(--color-white);
     font-weight: 700;
     padding-inline: 40px;
 
     @include hover {
-      background-color: var(--color-white);
+      background: var(--color-white);
       color: var(--color-blue);
+      border: var(--button-border);
     }
   }
 }

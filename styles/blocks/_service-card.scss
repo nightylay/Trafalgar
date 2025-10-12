@@ -1,0 +1,24 @@
+@use '../helpers' as *;
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-20);
+  box-shadow: var(--shadow-card);
+  padding: 54px 45px 46px 37px;
+  min-height: 350px;
+  height: 100%;
+
+  &__wrapper-image {
+    height: 95px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}

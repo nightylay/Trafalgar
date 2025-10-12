@@ -3,23 +3,20 @@
 .hero {
   position: relative;
   padding: 84px 0px 190px 0px;
-  overflow-x: hidden;
 
   &:before {
-    --widthBgImageDots: 131px;
+    @include square(131px);
 
     content: '';
     position: absolute;
-    left: calc((var(--widthBgImageDots) - 80px) * -1);
+    left: -80px;
     top: 10%;
-    width: var(--widthBgImageDots);
-    height: 115px;
     background: url('../../assets/images/bg-images/dots.svg') center / contain
       no-repeat;
   }
 
   @include tablet {
-    padding: 64px 0px 150px 0px;
+    padding: 64px 0px 120px 0px;
   }
 
   &__main {

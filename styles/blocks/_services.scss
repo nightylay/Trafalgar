@@ -1,0 +1,48 @@
+@use '../helpers' as *;
+
+.services {
+  padding-bottom: 220px;
+  position: relative;
+
+  &:before {
+    @include square(75%);
+
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -270px;
+    background: url('../../assets/images/bg-images/vector.svg') center / contain
+      no-repeat;
+    z-index: -1;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 70px;
+
+    @include tablet {
+      row-gap: 50px;
+    }
+  }
+
+  &__list {
+    position: relative;
+
+    &:after {
+      @include square(131px);
+      @include abs-y;
+
+      content: '';
+      left: 93%;
+      background: url('../../assets/images/bg-images/dots.svg') center / contain
+        no-repeat;
+      z-index: -1;
+
+      @include tablet {
+        top: 33%;
+      }
+    }
+  }
+}
