@@ -4,6 +4,10 @@
   padding-bottom: 220px;
   position: relative;
 
+  &__description {
+    text-align: center;
+  }
+
   &:before {
     @include square(75%);
 
@@ -35,7 +39,7 @@
       @include abs-y;
 
       content: '';
-      left: 93%;
+      left: 95%;
       background: url('../../assets/images/bg-images/dots.svg') center / contain
         no-repeat;
       z-index: -1;

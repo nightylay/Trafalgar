@@ -6,7 +6,7 @@
   background: var(--color-white);
   border: var(--button-border);
   border-radius: 55px;
-  padding-inline: 51px;
+  min-width: 200px;
 
   @include hover {
     background: var(--color-gradient-blue);

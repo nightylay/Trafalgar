@@ -1,0 +1,56 @@
+@use '../helpers' as *;
+
+.about {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 230px;
+  }
+
+  &__item {
+    &:nth-child(2) {
+      .about__card {
+        &-button {
+          @include flex-center;
+          column-gap: 14px;
+
+          &::after {
+            @include square(16px);
+
+            content: '';
+            background: url('../../assets/icons/arrow-down.svg') center /
+              contain no-repeat;
+          }
+          @include hover {
+            &::after {
+              filter: brightness(0) invert(1);
+            }
+          }
+        }
+      }
+    }
+    &:nth-child(even) {
+      .about__card {
+        flex-direction: row-reverse;
+        &-body {
+          max-width: 365px;
+        }
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 40px;
+
+    &-body {
+      max-width: 486px;
+    }
+
+    &-description {
+      margin-bottom: 40px;
+    }
+  }
+}
