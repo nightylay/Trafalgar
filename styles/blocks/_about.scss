@@ -2,6 +2,18 @@
 
 .about {
   padding-top: 220px;
+  position: relative;
+
+  &:after {
+    @include square(131px);
+
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 94%;
+    background: url('../../assets/images/bg-images/dots.svg') center / contain
+      no-repeat;
+  }
 
   @include tablet {
     padding-top: 150px;
@@ -16,12 +28,16 @@
     flex-direction: column;
     row-gap: 230px;
 
-    @include tablet {
+    @include laptop {
       row-gap: 150px;
     }
 
-    @include mobile {
+    @include tablet {
       row-gap: 80px;
+    }
+
+    @include mobile {
+      row-gap: 60px;
     }
   }
 
