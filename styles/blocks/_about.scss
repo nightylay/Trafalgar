@@ -1,15 +1,37 @@
 @use '../helpers' as *;
 
 .about {
+  padding-top: 220px;
+
+  @include tablet {
+    padding-top: 150px;
+  }
+
+  @include mobile {
+    padding-top: 70px;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
     row-gap: 230px;
+
+    @include tablet {
+      row-gap: 150px;
+    }
+
+    @include mobile {
+      row-gap: 80px;
+    }
   }
 
   &__item {
     &:nth-child(2) {
       .about__card {
+        &-body {
+          max-width: 420px;
+        }
+
         &-button {
           @include flex-center;
           column-gap: 14px;
@@ -32,8 +54,9 @@
     &:nth-child(even) {
       .about__card {
         flex-direction: row-reverse;
-        &-body {
-          max-width: 365px;
+
+        @include tablet {
+          flex-direction: column;
         }
       }
     }
@@ -45,8 +68,29 @@
     justify-content: space-between;
     column-gap: 40px;
 
+    @include tablet {
+      flex-direction: column;
+    }
+
+    &-image {
+      @include laptop {
+        max-width: 50%;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+
+      @include tablet {
+        max-width: 100%;
+      }
+    }
+
     &-body {
       max-width: 486px;
+
+      @include tablet {
+        display: contents;
+      }
     }
 
     &-description {

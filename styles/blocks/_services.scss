@@ -1,20 +1,15 @@
 @use '../helpers' as *;
 
 .services {
-  padding-bottom: 220px;
   position: relative;
 
-  &__description {
-    text-align: center;
-  }
-
   &:before {
-    @include square(75%);
+    @include square(90%);
 
     content: '';
     position: absolute;
-    top: -30px;
-    left: -270px;
+    top: -5%;
+    left: -20%;
     background: url('../../assets/images/bg-images/vector.svg') center / contain
       no-repeat;
     z-index: -1;

@@ -14,12 +14,24 @@
 
     &:not(:last-child) {
       margin-bottom: 80px;
+
+      @include tablet {
+        margin-bottom: 60px;
+      }
+
+      @include mobile {
+        margin-bottom: 40px;
+      }
     }
   }
 
   &-title {
     position: relative;
     display: inline-flex;
+
+    @include tablet {
+      text-align: center;
+    }
 
     &:not(:last-child) {
       margin-bottom: 60px;
@@ -47,7 +59,18 @@
         width: 56px;
         height: 2px;
         background-color: var(--color-black);
+
+        @include tablet {
+          @include abs-x;
+          top: 100%;
+        }
       }
+    }
+  }
+
+  &-description {
+    @include tablet {
+      text-align: justify;
     }
   }
 }
