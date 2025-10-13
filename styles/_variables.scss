@@ -6,7 +6,12 @@
   --color-blue-alternate: #4089ed;
   --color-dark-blue: #233348;
   --color-dark-purple: #1f1534;
-  --color-gradient-blue: linear-gradient(212deg, #67c3f3 0%, #5a98f2 100%);
+  --color-gradient-blue: linear-gradient(223deg, #67c3f3 0%, #5a98f2 100%);
+  --color-gradient-blue-alternate: linear-gradient(
+    212deg,
+    #67c3f3 0%,
+    #5a98f2 100%
+  );
 
   --container-width-lg: 1270px;
   --container-width-md: 1220px;
@@ -16,8 +21,9 @@
 
   --font-family-base: 'Mulish', sans-serif;
 
-  --border-radius-20: 20px;
   --border-radius-55: 55px;
+  --border-radius-24: 24px;
+  --border-radius-20: 20px;
 
   --shadow-card: 10px 40px 50px 0 rgba(229, 233, 246, 0.4);
 

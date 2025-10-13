@@ -5,8 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="scripts/main.js" type="module"></script>
   <title>Trafalgar</title>
 </head>
@@ -77,7 +79,7 @@
     <section class="services section section--hidden-x" aria-labelledby="services-title">
       <div class="container-sm">
         <header class="services__header section-header">
-          <h2 class="services__title section-title section-title--center-line">
+          <h2 class="services__title section-title section-title--center-line" id="services-title">
             Our services
           </h2>
           <div class="services__description section-description">
@@ -235,6 +237,61 @@
       </div>
     </section>
 
+    <section class="reviews section section--hidden-x" aria-labelledby="reviews-title">
+      <div class="container-sm">
+        <div class="section__body">
+
+          <div class="reviews__wrapper">
+            <div class="reviews__slider swiper">
+
+              <header class="services__header section-header">
+                <h2 class="reviews__title section-title section-title--center-line">
+                  What our customer are saying
+                </h2>
+              </header>
+
+              <div class="reviews__slider-wrapper swiper-wrapper">
+                <div class="reviews__slide swiper-slide">
+                  <blockquote class="review-card">
+                    <div class="review-card__customer">
+                      <img src="./assets/images/customer-1.png" alt="Man in a hat" width="141" height="141"
+                        loading="lazy">
+                      <div class="review-card__info">
+                        <cite class="review-card__info-name">Edward Newgate</cite>
+                        <cite class="review-card__info-post">Founder Circle</cite>
+                      </div>
+                    </div>
+
+                    <div class="review-card__body">
+                      <p>
+                        Our dedicated patient engagement app and
+                        web portal allow you to access information instantaneously (no tedious form, long calls,
+                        or administrative hassle) and securely
+                      </p>
+                    </div>
+
+                  </blockquote>
+                </div>
+                <div class="reviews__slide swiper-slide">Slide 2</div>
+                <div class="reviews__slide swiper-slide">Slide 3</div>
+              </div>
+
+            </div>
+
+            <div class="reviews__slider-actions">
+              <div class="reviews__slider-button-prev wiper-button-prev"></div>
+              <div class="reviews__slider-button-next">
+
+              </div>
+              <div class="reviews__slider-pagination swiper-pagination"></div>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </section>
 
 
   </main>
