@@ -1,18 +1,24 @@
 function initSlider() {
-  console.log(123);
+  console.log(123)
 
-  const swiper = new Swiper(".reviews__slider", {
-    cssMode: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  const reviewsSlider = new Swiper('.reviews__block', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 150,
+
+    // Пагинация
     pagination: {
-      el: ".swiper-pagination",
+      el: '.swiper-pagination',
+      clickable: true,
     },
-    mousewheel: true,
-    keyboard: true,
+
+    // Навигационные стрелки
+    navigation: {
+      nextEl: '.reviews__slider-button-next',
+      prevEl: '.reviews__slider-button-prev',
+    },
   });
-}
+};
+
 
 export default initSlider

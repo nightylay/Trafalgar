@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+
+.reviews {
+  padding-top: 266px;
+
+  @include laptop {
+    padding-top: 160px;
+  }
+
+  @include tablet {
+    padding-top: 80px;
+  }
+
+  @include mobile {
+    padding-top: 60px;
+  }
+
+  &__inner {
+    position: relative;
+    max-width: var(--container-width-sm);
+    margin-inline: auto;
+
+    &::before {
+      @include square(131px);
+
+      content: '';
+      position: absolute;
+      left: -5%;
+      top: 65%;
+      z-index: 1;
+      background: url('../../assets/images/bg-images/dots.svg') center / contain
+        no-repeat;
+    }
+  }
+}

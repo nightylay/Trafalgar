@@ -566,30 +566,22 @@ h3,
   }
 }
 
-.reviews {
-  padding-top: 266px;
-}
-.reviews__title {
-  color: var(--color-white);
-}
-.reviews .section-title--center-line:after {
-  background-color: var(--color-white);
-}
-.reviews__wrapper {
+.reviews__block {
   position: relative;
-  height: 100%;
-}
-.reviews__slider {
-  width: 100%;
+  background: var(--color-gradient-blue);
+  border-radius: 24px;
   padding: 64px 118px 79px;
-  background: linear-gradient(223deg, #67c3f3 0%, #5a98f2 100%);
-  border-radius: var(--border-radius-24);
 }
-.reviews__slider-actions {
-  margin-bottom: 150px;
-}
-.reviews__slider-actions .swiper-pagination {
-  bottom: -50px;
+.reviews__block::after {
+  width: 131px;
+  height: 131px;
+  content: "";
+  position: absolute;
+  left: 92%;
+  top: -5%;
+  z-index: 3;
+  background: url("../../assets/images/bg-images/dots.svg") center/contain no-repeat;
+  filter: brightness(0) invert(100%);
 }
 
 .service-card {
@@ -611,6 +603,30 @@ h3,
 .service-card__description {
   font-size: 16px;
   line-height: 1.75;
+}
+
+.review-card__customer {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+.review-card__customer-image {
+  border: 5px solid var(--color-white);
+  border-radius: 50%;
+}
+.review-card__info-name {
+  font-size: clamp(20pxpx, 1.375pxvw, 22pxpx);
+  font-weight: 700;
+  line-height: 2.18;
+}
+.review-card__info-company {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 2.67;
+  opacity: 0.85;
+}
+.review-card__info-name, .review-card__info-company {
+  color: var(--color-white);
 }
 
 .section--hidden-x {
@@ -675,6 +691,12 @@ h3,
     translate: -50%;
     top: 100%;
   }
+}
+.section-title--color-white {
+  color: var(--color-white);
+}
+.section-title--color-white::after {
+  background-color: var(--color-white);
 }
 @media (width <= 1023.98px) {
   .section-description {
@@ -921,6 +943,40 @@ h3,
 }
 .about__card-description {
   margin-bottom: 40px;
+}
+
+.reviews {
+  padding-top: 266px;
+}
+@media (width <= 1180.98px) {
+  .reviews {
+    padding-top: 160px;
+  }
+}
+@media (width <= 1023.98px) {
+  .reviews {
+    padding-top: 80px;
+  }
+}
+@media (width <= 767.98px) {
+  .reviews {
+    padding-top: 60px;
+  }
+}
+.reviews__inner {
+  position: relative;
+  max-width: var(--container-width-sm);
+  margin-inline: auto;
+}
+.reviews__inner::before {
+  width: 131px;
+  height: 131px;
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: 65%;
+  z-index: 1;
+  background: url("../../assets/images/bg-images/dots.svg") center/contain no-repeat;
 }
 
 /*# sourceMappingURL=main.css.map */

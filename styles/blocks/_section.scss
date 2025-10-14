@@ -66,6 +66,13 @@
         }
       }
     }
+
+    &--color-white {
+      color: var(--color-white);
+      &::after {
+        background-color: var(--color-white);
+      }
+    }
   }
 
   &-description {
