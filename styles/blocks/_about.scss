@@ -70,6 +70,8 @@
     &:nth-child(even) {
       .about__card {
         flex-direction: row-reverse;
+        max-width: 1150px;
+        margin-inline: auto;
 
         @include tablet {
           flex-direction: column;

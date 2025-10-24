@@ -1,334 +1,483 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts/main.js" type="module"></script>
+    <title>Trafalgar</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="styles/main.css" />
-  <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="scripts/main.js" type="module"></script>
-  <title>Trafalgar</title>
-</head>
+  <body>
+    <header class="header">
+      <div class="header__inner container-md">
+        <a href="#" class="header__logo">
+          <svg class="header__logo-icon">
+            <use href="assets/sprites.svg#logo-img"></use>
+          </svg>
+          Trafalgar
+        </a>
 
-<body>
-  <header class="header">
-    <div class="header__inner container-md">
-      <a href="#" class="header__logo">
-        <svg class="header__logo-icon">
-          <use href="assets/sprites.svg#logo-img"></use>
-        </svg>
-        Trafalgar
-      </a>
-
-      <div class="header__overlay" data-js-header-menu>
-        <nav class="header__menu">
-          <ul class="header__menu-list">
-            <li class="header__menu-item">
-              <a href="#" class="header__menu-link">Home</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu-link">Find a doctor</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu-link">Apps</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu-link">Testimonials</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu-link">About us</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <button class="header__burger-button burger-button visible-mobile" type="button" aria-label="Open menu"
-        title="Open menu" data-js-header-burger-button>
-        <span class="burger-button__line"></span>
-        <span class="burger-button__line"></span>
-        <span class="burger-button__line"></span>
-      </button>
-    </div>
-  </header>
-
-  <main class="content">
-    <section class="hero section section--hidden-x" aria-labelledby="hero-title">
-      <div class="hero__main container-md">
-        <div class="hero__body">
-          <h1 class="hero__title" id="hero-title">
-            Virtual healthcare for&nbsp;you
-          </h1>
-          <div class="hero__description">
-            <p>
-              Trafalgar provides progressive, and affordable healthcare,
-              accessible on mobile and online for everyone
-            </p>
-          </div>
-          <button class="hero__button button button--bg-blue">
-            Consult today
-          </button>
+        <div class="header__overlay" data-js-header-menu>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Home</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Find a doctor</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Apps</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Testimonials</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">About us</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <img class="hero__image" src="./assets/images/hero-bg.png" alt="Virtual healthcare illustration" width="693"
-          height="600" loading="lazy" />
-      </div>
-    </section>
 
-    <section class="services section section--hidden-x" aria-labelledby="services-title">
-      <div class="container-sm">
-        <header class="services__header section-header">
-          <h2 class="services__title section-title section-title--center-line" id="services-title">
-            Our services
-          </h2>
-          <div class="services__description section-description">
-            <p>
-              We provide to you the best choices for you. Adjust it to your
-              health needs and make sure your undergo treatment with our
-              highly qualified doctors you can consult with us which type of
-              service is suitable for your health
-            </p>
+        <button
+          class="header__burger-button burger-button visible-mobile"
+          type="button"
+          aria-label="Open menu"
+          title="Open menu"
+          data-js-header-burger-button
+        >
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="content">
+      <section
+        class="hero section section--hidden-x"
+        aria-labelledby="hero-title"
+      >
+        <div class="hero__main container-md">
+          <div class="hero__body">
+            <h1 class="hero__title" id="hero-title">
+              Virtual healthcare for&nbsp;you
+            </h1>
+            <div class="hero__description">
+              <p>
+                Trafalgar provides progressive, and affordable healthcare,
+                accessible on mobile and online for everyone
+              </p>
+            </div>
+            <button class="hero__button button button--bg-blue">
+              Consult today
+            </button>
           </div>
-        </header>
-        <div class="services__body">
-          <ul class="services__list grid grid--3">
-            <li class="services__item">
-              <article class="service-card">
-                <div class="service-card__wrapper-image">
-                  <img class="service-card__image" src="./assets/icons/services/search.svg" alt="Search icon" width="90"
-                    height="95" loading="lazy" />
-                </div>
-
-                <h3 class="service-card__title">Search doctor</h3>
-                <div class="service-card__description">
-                  <p>
-                    Choose your doctor from thousands of specialist, general,
-                    and trusted hospitals
-                  </p>
-                </div>
-              </article>
-            </li>
-            <li class="services__item">
-              <article class="service-card">
-                <div class="service-card__wrapper-image">
-                  <img class="service-card__image" src="./assets/icons/services/pharmacy.svg" alt="Search icon"
-                    width="61" height="85" loading="lazy" />
-                </div>
-                <h3 class="service-card__title">Online pharmacy</h3>
-                <div class="service-card__description">
-                  <p>
-                    Buy your medicines with our mobile application with a
-                    simple delivery system
-                  </p>
-                </div>
-              </article>
-            </li>
-            <li class="services__item">
-              <article class="service-card">
-                <div class="service-card__wrapper-image">
-                  <img class="service-card__image" src="./assets/icons/services/consultation.svg" alt="Search icon"
-                    width="67" height="95" loading="lazy" />
-                </div>
-
-                <h3 class="service-card__title">Consultation</h3>
-                <div class="service-card__description">
-                  <p>
-                    Free consultation with our trusted doctors and get the
-                    best recomendations
-                  </p>
-                </div>
-              </article>
-            </li>
-            <li class="services__item">
-              <article class="service-card">
-                <div class="service-card__wrapper-image">
-                  <img class="service-card__image" src="./assets/icons/services/details.svg" alt="Search icon"
-                    width="67" height="95" loading="lazy" />
-                </div>
-                <h3 class="service-card__title">Details info</h3>
-                <div class="service-card__description">
-                  <p>
-                    Free consultation with our trusted doctors and get the
-                    best recomendations
-                  </p>
-                </div>
-              </article>
-            </li>
-            <li class="services__item">
-              <article class="service-card">
-                <div class="service-card__wrapper-image">
-                  <img class="service-card__image" src="./assets/icons/services/emergency.svg" alt="Search icon"
-                    width="80" height="71" loading="lazy" />
-                </div>
-
-                <h3 class="service-card__title">Emergency care</h3>
-                <div class="service-card__description">
-                  <p>
-                    You can get 24/7 urgent care for yourself or your children
-                    and your lovely family
-                  </p>
-                </div>
-              </article>
-            </li>
-            <li class="services__item">
-              <article class="service-card">
-                <div class="service-card__wrapper-image">
-                  <img class="service-card__image" src="./assets/icons/services/tracking.svg" alt="Search icon"
-                    width="70" height="95" loading="lazy" />
-                </div>
-                <h3 class="service-card__title">Tracking</h3>
-                <div class="service-card__description">
-                  <p>Track and save your medical history and health data</p>
-                </div>
-              </article>
-            </li>
-          </ul>
-          <button class="button services-button button">Learn more</button>
+          <img
+            class="hero__image"
+            src="./assets/images/hero-bg.png"
+            alt="Virtual healthcare illustration"
+            width="693"
+            height="600"
+            loading="lazy"
+          />
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="about section section--hidden-x" aria-labelledby="about-title">
-      <div class="container-lg">
-        <div class="section__body">
-          <ul class="about__list">
-            <li class="about__item">
-              <div class="about__card">
-                <img class="about__card-image" src="./assets/images/healthcare-bg.png" alt="healthcare illustration"
-                  width="650" height="477" loading="lazy" />
-                <div class="about__card-body">
-                  <h2 class="about__card-title section-title section-title--start-line" id="about-title">
-                    Leading healthcare providers
-                  </h2>
-                  <div class="about__card-description section-description">
+      <section
+        class="services section section--hidden-x"
+        aria-labelledby="services-title"
+      >
+        <div class="container-sm">
+          <header class="services__header section-header">
+            <h2
+              class="services__title section-title section-title--center-line"
+              id="services-title"
+            >
+              Our services
+            </h2>
+            <div class="services__description section-description">
+              <p>
+                We provide to you the best choices for you. Adjust it to your
+                health needs and make sure your undergo treatment with our
+                highly qualified doctors you can consult with us which type of
+                service is suitable for your health
+              </p>
+            </div>
+          </header>
+          <div class="services__body">
+            <ul class="services__list grid grid--3">
+              <li class="services__item">
+                <article class="service-card">
+                  <div class="service-card__wrapper-image">
+                    <img
+                      class="service-card__image"
+                      src="./assets/icons/services/search.svg"
+                      alt="Search icon"
+                      width="90"
+                      height="95"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3 class="service-card__title">Search doctor</h3>
+                  <div class="service-card__description">
                     <p>
-                      Trafalgar provides progressive, and affordable healthcare,
-                      accessible on mobile and online for everyone. To us, it’s
-                      not just work. We take pride in the solutions we deliver
+                      Choose your doctor from thousands of specialist, general,
+                      and trusted hospitals
                     </p>
                   </div>
-                  <button class="about__card-button button">Learn more</button>
-                </div>
-              </div>
-            </li>
-            <li class="about__item">
-              <div class="about__card">
-                <img class="about__card-image" src="./assets/images/download-bg.png" alt="healthcare illustration"
-                  width="650" height="477" loading="lazy" />
-                <div class="about__card-body">
-                  <h2 class="about__card-title section-title section-title--start-line">
-                    Download our mobile apps
-                  </h2>
-                  <div class="about__card-description section-description">
+                </article>
+              </li>
+              <li class="services__item">
+                <article class="service-card">
+                  <div class="service-card__wrapper-image">
+                    <img
+                      class="service-card__image"
+                      src="./assets/icons/services/pharmacy.svg"
+                      alt="Search icon"
+                      width="61"
+                      height="85"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 class="service-card__title">Online pharmacy</h3>
+                  <div class="service-card__description">
                     <p>
-                      Our dedicated patient engagement app and web portal allow
-                      you to access information instantaneously (no tedious
-                      form, long calls, or administrative hassle) and securely
+                      Buy your medicines with our mobile application with a
+                      simple delivery system
                     </p>
                   </div>
-                  <button class="about__card-button button">Download</button>
-                </div>
-              </div>
-            </li>
-          </ul>
+                </article>
+              </li>
+              <li class="services__item">
+                <article class="service-card">
+                  <div class="service-card__wrapper-image">
+                    <img
+                      class="service-card__image"
+                      src="./assets/icons/services/consultation.svg"
+                      alt="Search icon"
+                      width="67"
+                      height="95"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3 class="service-card__title">Consultation</h3>
+                  <div class="service-card__description">
+                    <p>
+                      Free consultation with our trusted doctors and get the
+                      best recomendations
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li class="services__item">
+                <article class="service-card">
+                  <div class="service-card__wrapper-image">
+                    <img
+                      class="service-card__image"
+                      src="./assets/icons/services/details.svg"
+                      alt="Search icon"
+                      width="67"
+                      height="95"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 class="service-card__title">Details info</h3>
+                  <div class="service-card__description">
+                    <p>
+                      Free consultation with our trusted doctors and get the
+                      best recomendations
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li class="services__item">
+                <article class="service-card">
+                  <div class="service-card__wrapper-image">
+                    <img
+                      class="service-card__image"
+                      src="./assets/icons/services/emergency.svg"
+                      alt="Search icon"
+                      width="80"
+                      height="71"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3 class="service-card__title">Emergency care</h3>
+                  <div class="service-card__description">
+                    <p>
+                      You can get 24/7 urgent care for yourself or your children
+                      and your lovely family
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li class="services__item">
+                <article class="service-card">
+                  <div class="service-card__wrapper-image">
+                    <img
+                      class="service-card__image"
+                      src="./assets/icons/services/tracking.svg"
+                      alt="Search icon"
+                      width="70"
+                      height="95"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 class="service-card__title">Tracking</h3>
+                  <div class="service-card__description">
+                    <p>Track and save your medical history and health data</p>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            <button class="button services-button button">Learn more</button>
+          </div>
         </div>
+      </section>
 
-      </div>
-    </section>
+      <section
+        class="about section section--hidden-x"
+        aria-labelledby="about-title"
+      >
+        <div class="container-lg">
+          <div class="section__body">
+            <ul class="about__list">
+              <li class="about__item">
+                <div class="about__card">
+                  <img
+                    class="about__card-image"
+                    src="./assets/images/healthcare-bg.png"
+                    alt="healthcare illustration"
+                    width="650"
+                    height="477"
+                    loading="lazy"
+                  />
+                  <div class="about__card-body">
+                    <h2
+                      class="about__card-title section-title section-title--start-line"
+                      id="about-title"
+                    >
+                      Leading healthcare providers
+                    </h2>
+                    <div class="about__card-description section-description">
+                      <p>
+                        Trafalgar provides progressive, and affordable
+                        healthcare, accessible on mobile and online for
+                        everyone. To us, it’s not just work. We take pride in
+                        the solutions we deliver
+                      </p>
+                    </div>
+                    <button class="about__card-button button">
+                      Learn more
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="about__item">
+                <div class="about__card">
+                  <img
+                    class="about__card-image"
+                    src="./assets/images/download-bg.png"
+                    alt="healthcare illustration"
+                    width="650"
+                    height="477"
+                    loading="lazy"
+                  />
+                  <div class="about__card-body">
+                    <h2
+                      class="about__card-title section-title section-title--start-line"
+                    >
+                      Download our mobile apps
+                    </h2>
+                    <div class="about__card-description section-description">
+                      <p>
+                        Our dedicated patient engagement app and web portal
+                        allow you to access information instantaneously (no
+                        tedious form, long calls, or administrative hassle) and
+                        securely
+                      </p>
+                    </div>
+                    <button class="about__card-button button">Download</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    <section class="reviews section section--hidden-x" aria-labelledby="reviews-title">
-      <div class="container-md">
-        <div class="section__body">
-
-          <div class="reviews__inner">
-            <div class="reviews__slider swiper">
-
-              <div class="reviews__block">
-                <header class="reviews__slider-header section-header">
-                  <h2 class="reviews__slider-title section-title section-title--center-line section-title--color-white"
-                    id="reviews-title">
+      <section
+        class="reviews section section--hidden-x"
+        aria-labelledby="reviews-title"
+      >
+        <div class="container-md">
+          <div class="reviews__slider swiper">
+            <div class="reviews__body">
+              <div class="reviews__slider-header">
+                <header class="reviews__header section-header">
+                  <h2
+                    class="reviews__title section-title section-title--center-line section-title--color-white"
+                    id="services-title"
+                  >
                     What our customer are saying
                   </h2>
                 </header>
-
-                <div class="reviews__slider-wrapper swiper-wrapper">
-                  <div class="reviews__slide swiper-slide">
-                    <blockquote class="review-card">
-                      <div class="review-card__customer">
-                        <img class="review-card__customer-image" src="./assets/images/customer-1.png" alt="Man in a har" width="141" height="141"
-                          loading="lazy">
-                        <div class="review-card__info">
-                          <div class="review-card__info-name">Edward Newgate</div>
-                          <div class="review-card__info-company">Founder Circle</div>
-                        </div>
-                      </div>
-                      <div class="review-card__body">
-                        <p>Our dedicated patient engagement app and
-                          web portal allow you to access information instantaneously (no tedeous form, long calls,
-                          or administrative hassle) and securely</p>
-                      </div>
-                    </blockquote>
-                  </div>
-                  <div class="reviews__slide swiper-slide">
-                    <blockquote class="review-card">
-                      <div class="review-card__customer">
-                        <img src="./assets/images/customer-1.png" alt="Man in a har" width="141" height="141"
-                          loading="lazy">
-                        <div class="review-card__info">
-                          <div class="review-card__info-name">Edward Newgate</div>
-                          <div class="review-card__info-company">Founder Circle</div>
-                        </div>
-                      </div>
-                      <div class="review-card__body">
-                        <p>Our dedicated patient engagement app and
-                          web portal allow you to access information instantaneously (no tedeous form, long calls,
-                          or administrative hassle) and securely</p>
-                      </div>
-                    </blockquote>
-                  </div>
-                  <div class="reviews__slide swiper-slide">
-                    <blockquote class="review-card">
-                      <div class="review-card__customer">
-                        <img src="./assets/images/customer-1.png" alt="Man in a har" width="141" height="141"
-                          loading="lazy">
-                        <div class="review-card__info">
-                          <div class="review-card__info-name">Edward Newgate</div>
-                          <div class="review-card__info-company">Founder Circle</div>
-                        </div>
-                      </div>
-                      <div class="review-card__body">
-                        <p>Our dedicated patient engagement app and
-                          web portal allow you to access information instantaneously (no tedeous form, long calls,
-                          or administrative hassle) and securely</p>
-                      </div>
-                    </blockquote>
-                  </div>
-                </div>
               </div>
 
-
-              <div class="reviews__slider-actions">
-                <div class="reviews__slider-button-prev">
-                  <img src="./assets/icons/arrow-left.svg" alt="" width="20" height="20" loading="lazy">
+              <div class="swiper-wrapper reviews__slider-wrapper">
+                <div class="reviews__slide swiper-slide">
+                  <blockquote class="review-card">
+                    <div class="review-card__customer">
+                      <img
+                        class="review-card__customer-image"
+                        src="./assets/images/customer-1.png"
+                        alt="Man in a hair"
+                        width="141"
+                        height="141"
+                        loading="lazy"
+                      />
+                      <div class="review-card__info">
+                        <div class="review-card__info-name">Edward Newgate</div>
+                        <div class="review-card__info-company">
+                          Founder Circle
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review-card__body">
+                      <p>
+                        Our dedicated patient engagement app and web portal
+                        allow you to access information instantaneously (no
+                        tedeous form, long calls, or administrative hassle) and
+                        securely
+                      </p>
+                    </div>
+                  </blockquote>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="reviews__slider-button-next">
-                  <img src="./assets/icons/arrow-right.svg" alt="" width="20" height="20" loading="lazy">
+                <div class="reviews__slide swiper-slide">
+                  <blockquote class="review-card">
+                    <div class="review-card__customer">
+                      <img
+                        class="review-card__customer-image"
+                        src="./assets/images/customer-1.png"
+                        alt="Man in a hair"
+                        width="141"
+                        height="141"
+                        loading="lazy"
+                      />
+                      <div class="review-card__info">
+                        <div class="review-card__info-name">Edward Newgate</div>
+                        <div class="review-card__info-company">
+                          Founder Circle
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review-card__body">
+                      <p>
+                        Our dedicated patient engagement app and web portal
+                        allow you to access information instantaneously (no
+                        tedeous form, long calls, or administrative hassle) and
+                        securely
+                      </p>
+                    </div>
+                  </blockquote>
                 </div>
-
+                <div class="reviews__slide swiper-slide">
+                  <blockquote class="review-card">
+                    <div class="review-card__customer">
+                      <img
+                        class="review-card__customer-image"
+                        src="./assets/images/customer-1.png"
+                        alt="Man in a hair"
+                        width="141"
+                        height="141"
+                        loading="lazy"
+                      />
+                      <div class="review-card__info">
+                        <div class="review-card__info-name">Edward Newgate</div>
+                        <div class="review-card__info-company">
+                          Founder Circle
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review-card__body">
+                      <p>
+                        Our dedicated patient engagement app and web portal
+                        allow you to access information instantaneously (no
+                        tedeous form, long calls, or administrative hassle) and
+                        securely
+                      </p>
+                    </div>
+                  </blockquote>
+                </div>
+                <div class="reviews__slide swiper-slide">
+                  <blockquote class="review-card">
+                    <div class="review-card__customer">
+                      <img
+                        class="review-card__customer-image"
+                        src="./assets/images/customer-1.png"
+                        alt="Man in a hair"
+                        width="141"
+                        height="141"
+                        loading="lazy"
+                      />
+                      <div class="review-card__info">
+                        <div class="review-card__info-name">Edward Newgate</div>
+                        <div class="review-card__info-company">
+                          Founder Circle
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review-card__body">
+                      <p>
+                        Our dedicated patient engagement app and web portal
+                        allow you to access information instantaneously (no
+                        tedeous form, long calls, or administrative hassle) and
+                        securely
+                      </p>
+                    </div>
+                  </blockquote>
+                </div>
               </div>
             </div>
 
-
-
-
+            <div class="reviews__slider-actions">
+              <div class="reviews__slider-button-prev">
+                <img
+                  src="./assets/icons/arrow-left.svg"
+                  alt=""
+                  width="40"
+                  height="20"
+                  loading="lazy"
+                />
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="reviews__slider-button-next">
+                <img
+                  src="./assets/icons/arrow-right.svg"
+                  alt=""
+                  width="40"
+                  height="20"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </div>
-    </section>
-
-
-  </main>
-</body>
-
+      </section>
+    </main>
+  </body>
 </html>
