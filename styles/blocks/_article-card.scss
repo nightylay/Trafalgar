@@ -1,0 +1,61 @@
+@use '../helpers' as *;
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-20);
+  box-shadow: var(--shadow-card);
+  min-height: 350px;
+  height: 100%;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 51px 35px 33px;
+    flex-grow: 1;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: var(--border-radius-20) var(--border-radius-20) 0 0;
+  }
+
+  &__title {
+    @include fluid-text(21, 18);
+    line-height: 1.52;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__description {
+    flex: 1 1 auto;
+    font-size: 16px;
+    line-height: 1.75;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    color: var(--color-blue-alternate);
+    font-size: 17px;
+    font-weight: 600;
+    font-size: 1.65;
+
+    &:hover {
+      color: #2761b3;
+    }
+  }
+
+  &__icon-arrow {
+    @include square(15px);
+    fill: currentColor;
+  }
+}

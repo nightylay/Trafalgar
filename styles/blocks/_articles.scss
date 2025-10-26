@@ -1,0 +1,37 @@
+@use '../helpers' as *;
+
+.articles {
+  margin-top: 220px;
+
+  @include laptop {
+    margin-top: 160px;
+  }
+
+  @include tablet {
+    margin-top: 100px;
+  }
+
+  @include mobile {
+    margin-top: 70px;
+  }
+
+  @include mobile-s {
+    margin-top: 60px;
+  }
+
+  &__header {
+    margin-bottom: 105px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+  }
+}
