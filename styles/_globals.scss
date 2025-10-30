@@ -71,3 +71,17 @@ h3,
 .h3 {
   @include fluid-text(24, 18);
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  column-gap: 12px;
+  color: var(--color-dark-blue);
+  z-index: 2;
+
+  &-icon {
+    @include square(41px);
+  }
+}

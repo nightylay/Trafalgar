@@ -2,6 +2,20 @@
 
 .articles {
   margin-top: 220px;
+  position: relative;
+
+  &::after {
+    @include square(100%);
+
+    content: '';
+    position: absolute;
+    background: url('../../assets/images/bg-images/vector.svg') center / contain
+      no-repeat;
+    left: 35%;
+    top: 0;
+    z-index: -1;
+    transform: rotate(180deg);
+  }
 
   @include laptop {
     margin-top: 160px;
@@ -32,6 +46,23 @@
   &__list {
     &:not(:last-child) {
       margin-bottom: 70px;
+    }
+  }
+
+  &__item {
+    &:first-child {
+      position: relative;
+      &::before {
+        @include square(131px);
+
+        content: '';
+        position: absolute;
+        background: url('../../assets/images/bg-images/dots.svg') center/contain
+          no-repeat;
+        left: -15%;
+        top: -10%;
+        z-index: -1;
+      }
     }
   }
 }

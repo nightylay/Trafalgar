@@ -7,24 +7,14 @@
     padding-top: 36px;
   }
 
+  &__logo {
+    color: var(--color-dark-blue);
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__logo {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: 700;
-    column-gap: 12px;
-    color: var(--color-dark-blue);
-    z-index: 2;
-
-    &-icon {
-      @include square(41px);
-    }
   }
 
   &__overlay {

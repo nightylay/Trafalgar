@@ -50,6 +50,12 @@
       opacity: 0.3;
       cursor: not-allowed;
     }
+
+    &-icon-arrow {
+      width: 28px;
+      height: 17px;
+      fill: var(--color-blue);
+    }
   }
 
   &__body {

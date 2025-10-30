@@ -12,6 +12,12 @@
   padding-inline: var(--container-padding-x);
 }
 
+.container-md-s {
+  max-width: calc(var(--container-width-md-s) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
 .container-sm {
   max-width: calc(var(--container-width-sm) + var(--container-padding-x) * 2);
   margin-inline: auto;
